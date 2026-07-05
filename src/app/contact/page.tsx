@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
+import { Mail } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with CRBRO",
 };
-
-const inquiryTypes = [
-  "Booking / Session",
-  "Sync / Licensing",
-  "Press",
-  "Other",
-];
 
 export default function ContactPage() {
   return (
@@ -28,7 +21,17 @@ export default function ContactPage() {
             Tell me what you&apos;re working on. I&apos;ll get back to you within 48&nbsp;hours.
           </p>
 
-          <ContactForm inquiryTypes={inquiryTypes} />
+          <a
+            href="mailto:crbrobooking@gmail.com"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-crbro-gold text-crbro-dark font-heading text-sm tracking-widest uppercase rounded-sm transition-all hover:bg-crbro-gold/90 hover:shadow-[0_0_20px_rgba(170,116,68,0.4)]"
+          >
+            <Mail className="w-4 h-4" />
+            Send an email
+          </a>
+
+          <p className="text-xs text-crbro-white/30 mt-3">
+            crbrobooking@gmail.com
+          </p>
 
           <div className="mt-12 pt-8 border-t border-crbro-gold/10">
             <p className="text-xs tracking-widest uppercase text-crbro-white/40 mb-3 font-heading">
